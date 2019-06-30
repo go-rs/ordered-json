@@ -188,7 +188,7 @@ func TestUnmarshalOrderedMap(t *testing.T) {
 	// check by Has and GetValue
 	for _, kv := range pairs {
 		if !om.Has(kv.Key) {
-			t.Fatalf("expect key %q exists in Unmarshaled OrderedMap")
+			t.Fatalf("expect key %q exists in Unmarshaled OrderedMap", kv.Key)
 		}
 		value, ok := om.GetValue(kv.Key)
 		if !ok || value != kv.Value {

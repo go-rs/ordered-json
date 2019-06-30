@@ -102,6 +102,11 @@ func (om *OrderedMap) Delete(key string) (value interface{}, ok bool) {
 	return
 }
 
+// get map
+func (om *OrderedMap) GetMap() map[string]interface{} {
+	return om.m
+}
+
 // Iterate all key/value pairs in the same order of object constructed
 func (om *OrderedMap) EntriesIter() func() (*KVPair, bool) {
 	e := om.l.Front()
